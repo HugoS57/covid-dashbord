@@ -1,6 +1,6 @@
 # covid-dashbord
 ## Informations générales
-Application réalisé dans le but du projet tutoré, du DUT Informatique de Metz, année 2020 - 2021.
+Application réalisée dans le but du projet tutoré, du DUT Informatique de Metz, année 2020 - 2021.
 
 Le but de cette application est de proposer une plateforme d’information sur le covid-19. Cette plateforme est disponible sur web browser. On y retrouve des informations détaillées sur l’évolution de l’épidémie sous forme de nombreux graphiques.
 ## Démarrage
