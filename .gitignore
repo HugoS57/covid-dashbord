@@ -22,3 +22,15 @@
 ###> liip/imagine-bundle ###
 /public/media/cache/
 ###< liip/imagine-bundle ###
+
+.idea/codeStyles/codeStyleConfig.xml
+
+.idea/modules.xml
+
+.idea/php.xml
+
+.idea/ProjetTut.iml
+
+.idea/vcs.xml
+
+.idea/workspace.xml

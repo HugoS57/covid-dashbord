@@ -1,5 +1,10 @@
 <?php
-class bddServeur
+
+namespace App\Controller;
+
+use Exception;
+
+class BddController
 {
     private $host = 'devbdd.iutmetz.univ-lorraine.fr';
     private $user = 'wurtz35u_appli';
@@ -9,7 +14,7 @@ class bddServeur
     private $connection;
 
     /**
-     * bddServeur constructor.
+     * BddController constructor.
      */
     public function __construct()
     {
