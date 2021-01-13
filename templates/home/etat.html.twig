@@ -1,6 +1,11 @@
+<?php
+
+?>
+
 {% extends 'base.html.twig' %}
 
 {% block title %} Etat-Covid {% endblock %}
+
 
 {% block body %}
 
@@ -11,6 +16,14 @@
 
     </br>
 
+    {% if connexion %}
+        <p> Bdd ok </p>
+    {% else %}
+        <p> bdd non ok </p>
+    {% endif %}
+
+    $connexion = test;
+
     <img src="images/CarteFrance.jpg" alt="CarteFrance" usemap='#region'>
 
         <map name='region'>
@@ -20,13 +33,13 @@
                 coords="137,189,133,193,132,209,159,201,164,217,143,211,142,220,156,221,155,229,145,228,133,231,146,238,152,254,167,248,193,259,215,272,255,288,270,284,270,275,277,271,296,270,297,266,305,262,313,265,324,252,331,248,329,227,330,206,323,203,312,209,304,198,294,196,289,193,291,191,287,188,281,195,243,198,225,172,203,173,197,184,184,182,179,185,175,179,157,183,148,185,146,188" 
                 alt="Bretagne" 
                 target="Bretagne" 
-                href="www.pierre-giraud.com/creer-carte-interactive-html/" >
+                a href="bdd.php" >
             <area 
                 shape="poly" 
                 coords="290,107,295,122,297,133,303,138,303,146,307,148,305,157,308,164,309,174,306,179,307,186,312,190,316,192,315,196,308,196,307,202,313,208,323,204,327,206,335,208,341,207,345,211,349,212,355,210,360,209,373,209,373,204,378,206,380,210,386,215,385,219,389,219,403,212,408,214,408,222,418,232,423,230,426,232,431,236,430,227,439,220,438,206,432,201,433,196,435,193,442,193,450,188,455,190,462,188,462,184,468,177,466,168,470,164,476,164,480,153,486,148,482,136,482,114,485,108,481,97,467,85,449,95,425,100,403,110,396,126,398,130,409,132,407,135,399,136,390,143,381,145,370,141,356,140,346,137,338,135,332,138,330,132,325,124,328,115,325,110,318,108,314,110,306,111,291,106" 
                 alt="Normandie" 
                 target="Normandie"  
-                href="www.pierre-giraud.com/creer-carte-interactive-html/" >
+                href="www.google.fr" >
             <area 
                 shape="poly" 
                 coords="485,11,478,19,478,29,477,33,479,43,480,47,476,60,481,74,475,72,469,84,480,95,488,110,484,123,483,140,484,154,489,158,498,155,510,158,513,156,528,163,539,166,540,163,544,164,558,161,560,166,560,170,576,181,585,168,582,160,590,157,586,145,597,137,604,139,606,117,614,108,613,90,609,87,611,84,614,78,610,77,612,68,606,61,588,61,586,50,576,46,567,47,560,24,547,28,547,31,542,30,537,23,533,22,531,13,526,0,485,12,485,11,487,11"
@@ -134,17 +147,18 @@
 
         </map>
 
-    <blockquote class="blockquote text-right">
-        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-            <button type="button" class="btn btn-info">Départements</button>
-             <div class="btn-group" role="group">
-                 <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                    </div>
-            </div>
+
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">Informations sur la région sélectionnée</div>
+             <div class="card-body">
+                    <p class="card-text">Nom de la région :</p>
+                    <p class="card-text">Décès :</p>
+                    <p class="card-text">Guéris :</p>
+                    <p class="card-text">Hospitalisations :</p>
+                    <p class="card-text">Réanimations :</p>
+             </div>
         </div>
-    </blockquote>
+
+
 
 {% endblock %}
