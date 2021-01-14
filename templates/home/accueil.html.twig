@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+
 {% block title %}
     Covid-dashboard
 {% endblock %}
@@ -9,11 +10,25 @@
     <blockquote class="blockquote text-center">
         </br>
         <p class="mb-0">Ce site web permet a aux utilisateurs d'obtenir diverses informations en lien avec
-        le covid-19 en France. Vous trouverez ci-dessous de nombreux graphiques permettants les différentes courbes d'évolution du virus</p> 
-    </blockquote>
-    
-    <img src="https://via.placeholder.com/600x500" alt="">
+        le covid-19 en France. Vous trouverez ci-dessous de nombreux graphiques permettants les différentes courbes d'évolution du virus.</p>
 
-    <button type="button" class="btn btn-outline-info">Plus d'informations</button>
+    <br /> <br />
+
+    <img src="images/etat-covid.jpg" alt="etat-covid">
+
+    <button type="button" class="btn btn-outline-info" href="http://127.0.0.1:8002/etat.html.twig" >Plus d'informations</button>
+
+    <br /> <br />
+
+        <div class="card-header">Informations à l'échelle de la France depuis le début du virus :</div>
+             <div class="card-body">
+                    <p class="card-text">Décès : {{Deces[0]}} </p>
+                    <p class="card-text">Guéris : {{ Gueris[0]}}  </p>
+                    <p class="card-text">Hospitalisations : {{ Hospitalisation[0]}} </p>
+                    <p class="card-text">Réanimations : {{ Reanimation[0]}} </p>
+             </div>
+        </div>
+
+    </blockquote>
     
 {% endblock %}
